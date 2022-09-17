@@ -2,10 +2,11 @@ package Test_class_vector;
 
 import Vector_base.Vector;
 
-public class Aula07 {
+public class Aula08 {
+
     public static void main(String[] args) {
 
-        Vector vector = new Vector(10);
+        Vector vector = new Vector(3);
 
         vector.add("B");
         vector.add("C");
@@ -15,10 +16,6 @@ public class Aula07 {
 
         System.out.println(vector);
 
-        vector.add(0,"A");
-        System.out.println(vector);
 
-        vector.add(3,"D");
-        System.out.println(vector);
     }
 }
