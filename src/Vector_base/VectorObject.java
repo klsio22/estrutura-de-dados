@@ -1,33 +1,17 @@
 package Vector_base;
 
-public class Vector {
-    private String[] elements;
+import java.util.Arrays;
+
+public class VectorObject {
+    private Object[] elements;
     private int size;
 
-    public Vector(int capacity) {
-        this.elements = new String[capacity];
+    public VectorObject(int capacity) {
+        this.elements = new Object[capacity];
         this.size = 0;
     }
 
-    /*   public void add(String element) {
-        for (int i = 0; i < this.elements.length; i++) {
-            if (this.elements[i] == null) {
-                this.elements[i] = element;
-                break;
-            }
-        }
-    }*/
-
-    /*public void add(String element) throws Exception {
-        if (this.width < this.elements.length) {
-            this.elements[this.width] = element;
-            this.width++;
-        } else {
-            throw new Exception("Vector is full");
-        }
-    }*/
-
-    public boolean add(String element) {
+    public boolean add(Object element) {
         this.increaseCapacity();
         if (this.size < this.elements.length) {
             this.elements[this.size] = element;
@@ -39,7 +23,7 @@ public class Vector {
 
     //0 1 2 3 4 5
     //B C E F G . .
-    public void add(int position, String element) {
+    public void add(int position, Object element) {
 
         if (!(position >= 0 && position < size)) {
             throw new IllegalArgumentException("Posição inválida");
@@ -55,7 +39,7 @@ public class Vector {
 
     private void increaseCapacity() {
         if (this.size == this.elements.length) {
-            String[] newElements = new String[this.elements.length * 2];
+            Object[] newElements = new String[this.elements.length * 2];
             for (int i = 0; i < this.elements.length; i++) {
                 newElements[i] = this.elements[i];
             }
@@ -69,14 +53,14 @@ public class Vector {
     // vector[1] = vector [2]
     // vector[2] =  vector[3]
     // vector[3] = vector[4]
-    public void remove( int position){
-        if(!(position >= 0 && position < size)){
+    public void remove(int position) {
+        if (!(position >= 0 && position < size)) {
             throw new IllegalArgumentException("Posição inválida");
         }
-        for(int i = position ; i < this.size - 1; i++){
-            this.elements[i] = this.elements[i+1];
+        for (int i = position; i < this.size - 1; i++) {
+            this.elements[i] = this.elements[i + 1];
         }
-        this.size --;
+        this.size--;
     }
 
     public int size() {
@@ -84,14 +68,14 @@ public class Vector {
     }
 
 
-    public String search(int position) {
+    public Object search(int position) {
         if (!(position >= 0 && position < size)) {
             throw new IllegalArgumentException("Posição inválida");
         }
         return this.elements[position];
     }
 
-    public int search(String element) {
+    public int search(Object element) {
         for (int i = 0; i < this.size; i++) {
             if (this.elements[i].equals(element)) {
                 return i;
