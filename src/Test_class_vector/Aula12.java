@@ -1,7 +1,6 @@
 package Test_class_vector;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class Aula12 {
     public static void main(String[] args) {
@@ -31,5 +30,7 @@ public class Aula12 {
         System.out.println(arrayList);
 
         System.out.println(arrayList.size());
+
+
     }
 }

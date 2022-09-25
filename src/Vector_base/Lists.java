@@ -71,12 +71,35 @@ public class Lists<Type> {
         this.size--;
     }
 
+    public void remove(Type element) {
+        int pos = this.search(element);
+
+        if (pos > -1) {
+            this.remove(pos);
+        }
+    }
+
+    public void clear() {
+        if (this.size > 0) {
+            // this.elements = Type([]) new Object()[this.elements.length];
+
+            this.size = 0;
+            for (int i = 0; i < this.size; i++) {
+                this.elements[i] = null;
+            }
+            this.size = 0;
+        }
+    }
+
     public int size() {
         return this.size;
     }
 
+    public Type get(int position) {
+        return this.search(position);
+    }
 
-    public Object search(int position) {
+    public Type search(int position) {
         if (!(position >= 0 && position < size)) {
             throw new IllegalArgumentException("Posição inválida");
         }
@@ -90,6 +113,18 @@ public class Lists<Type> {
             }
         }
         return -1;
+    }
+
+    public int lastIndex(Type element) {
+        for (int i = this.size - 1; i >= 0; i--) {
+            if (this.elements[i].equals(element))
+                return i;
+        }
+        return -1;
+    }
+
+    public boolean contais(Type element) {
+        return search(element) > -1; //>=0
     }
 
     @Override
