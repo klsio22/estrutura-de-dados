@@ -1,8 +1,6 @@
-package Test_class_vector;
+package Curse_structure_dates.Test_class_vector;
 
-import Vector_base.Lists;
-
-import java.util.List;
+import Curse_structure_dates.Vector_base.Lists;
 import java.util.Scanner;
 
 public class Aula18 {
