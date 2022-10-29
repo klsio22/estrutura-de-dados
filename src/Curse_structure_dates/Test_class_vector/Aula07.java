@@ -20,5 +20,8 @@ public class Aula07 {
 
         vector.add(3,"D");
         System.out.println(vector);
+
+
+
     }
 }
