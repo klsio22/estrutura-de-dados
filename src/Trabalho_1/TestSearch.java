@@ -19,10 +19,16 @@ public class TestSearch {
 
     @Test
     public void shouldSearchWord() {
-        int count = 0;
         bruteForce.search("AABAACAADAABAABA", "AABA");
+
         assertEquals(Arrays.asList("Pattern found at index 0", "Pattern found at index 9", "Pattern found at index 12"), bruteForce.getValuesSearch());
     }
 
+    @Test
+    public void shouldSearchWord1() {
+        bruteForce.search("um é uma sdasd sdkasdjaujh um sdasd", "um");
+
+        assertEquals(Arrays.asList("Pattern found at index 0","Pattern found at index 5","Pattern found at index 27"),bruteForce.getValuesSearch());
+    }
 
 }

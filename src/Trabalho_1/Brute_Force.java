@@ -6,11 +6,11 @@ public class Brute_Force {
     ArrayList<String> valuesSearch = new ArrayList<>();
 
     public void search(String str, String query) { // recebe os valores por para buca de força bruta
-        int lengthText = str.length();
-        int lengthSearch = query.length();
-        for (int i = 0, j = lengthSearch - 1; j < lengthText; ) {
+        int lengthText = str.length();//
+        int lengthSearch = query.length();//
+        for (int i = 0, j = lengthSearch - 1; j < lengthText; ) {//
 
-            if (query.equals(str.substring(i, j + 1))) {
+            if (query.equals(str.substring(i, j + 1))) {//
                //System.out.printf("Pattern found at index %d,%n", i);
                 this.valuesSearch.add( "Pattern found at index "+ i);
             }
@@ -19,8 +19,8 @@ public class Brute_Force {
         }
     }
 
-    public ArrayList<String> getValuesSearch() {
-        return valuesSearch;
+    public ArrayList<String> getValuesSearch() {//
+        return valuesSearch; //retorno da arraylist
     }
 
 }

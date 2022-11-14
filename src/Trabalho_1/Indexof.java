@@ -6,14 +6,24 @@ public class Indexof {
 
         Brute_Force bruteForce = new Brute_Force();
 
-        String pat = "um é uma";
-        String txt = "um";
+        Rabin_Karp_algorithm algorithm = new Rabin_Karp_algorithm();
+
+
+        String txt = "AABAACAADAABAABA";
+        String pat = "AABA";
+
+    /*
 
         bruteForce.search(pat, txt);
 
         for (String srt : bruteForce.getValuesSearch()) {
             System.out.println(srt);
         }
+    */
+
+
+        algorithm.findPattern(pat,txt,1);
+
 
     }
 
