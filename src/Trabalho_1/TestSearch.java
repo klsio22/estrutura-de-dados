@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestSearch {
 
-    private Brute_Force bruteForce;
+            private Brute_Force bruteForce;
 
     @BeforeEach
     public void antesDeCadaTeste() {

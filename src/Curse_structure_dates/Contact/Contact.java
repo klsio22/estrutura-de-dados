@@ -1,4 +1,4 @@
-package Curse_structure_dates.Test_class_vector;
+package Curse_structure_dates.Contact;
 
 public class Contact {
     private String name;

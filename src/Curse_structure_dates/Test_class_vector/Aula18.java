@@ -1,5 +1,6 @@
 package Curse_structure_dates.Test_class_vector;
 
+import Curse_structure_dates.Contact.Contact;
 import Curse_structure_dates.Vector_base.Lists;
 import java.util.Scanner;
 
