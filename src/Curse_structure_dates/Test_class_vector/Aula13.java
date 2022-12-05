@@ -13,8 +13,8 @@ public class Aula13 {
         list.add("Z");
         list.add("C");
 
-        System.out.println(list.contais("A"));
-        System.out.println(list.contais("P"));
+        System.out.println(list.contains("A"));
+        System.out.println(list.contains("P"));
 
     }
 

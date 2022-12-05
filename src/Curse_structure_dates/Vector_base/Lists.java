@@ -121,7 +121,7 @@ public class Lists<Type> {
     return -1;
   }
 
-  public boolean contais(Type element) {
+  public boolean contains(Type element) {
     return search(element) > -1; //>=0
   }
 

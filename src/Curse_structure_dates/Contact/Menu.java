@@ -16,15 +16,19 @@ public class Menu {
           addFinalContact(scan, list);
           break;
         case 2:
-          addContactPosition(scan,list);
+          addContactPosition(scan, list);
           break;
         case 3:
+          getContactPosition(scan, list);
           break;
         case 4:
+          getContact(scan, list);
           break;
         case 5:
+          searchLastIndex(scan, list);
           break;
         case 6:
+          researchExistContact(scan, list);
           break;
         case 7:
           break;
@@ -103,6 +107,71 @@ public class Menu {
     input = scan.nextLine();
 
     return input;
+  }
+
+  public void getContact(Scanner scan, Lists<Contact> list) {
+    int position = readInformationInt("Entre com a posição a ser pesquisada", scan);
+
+    try {
+      Contact contact = list.search(position);
+      System.out.println("Contato existe, seguem dados:");
+      System.out.println(contact);
+
+      System.out.println("fazendo pesquisa do contato encotrado:");
+      position = list.search(contact);
+      System.out.println("Contato encotrado na posição " + position);
+
+    } catch (Exception e) {
+      System.out.println("Posição inválida");
+    }
+  }
+
+  public void getContactPosition(Scanner scan, Lists<Contact> list) {
+    int position = readInformationInt("Entre com a posição a ser pesquisada", scan);
+
+    try {
+      Contact contact = list.search(position);
+      System.out.println("Contato existe, seguem dados:");
+      System.out.println(contact);
+    } catch (Exception e) {
+      System.out.println("Posição inválida");
+    }
+  }
+
+  public void searchLastIndex(Scanner scan, Lists<Contact> list) {
+    int position = readInformationInt("Entre com a posição a ser pesquisada", scan);
+
+    try {
+      Contact contact = list.search(position);
+      System.out.println("Contato existe, seguem dados:");
+      System.out.println(contact);
+
+      System.out.println("fazendo pesquisa do útimo indice do contato encotrado:");
+      position = list.lastIndex(contact);
+
+      System.out.println("Contato encotrado na posição " + position);
+
+    } catch (Exception e) {
+      System.out.println("Posição inválida");
+    }
+  }
+
+  public void researchExistContact(Scanner scan, Lists<Contact> list) {
+    int position = readInformationInt("Entre com a posição a ser pesquisada", scan);
+
+    try {
+      Contact contact = list.search(position);
+      boolean exist = list.contains(contact);
+
+      if (exist) {
+        System.out.println("Contato existe, seguem dados:");
+        System.out.println(contact);
+      }
+      System.out.println("Contato encotrado na posição " + position);
+
+    } catch (Exception e) {
+      System.out.println("Posição inválida");
+    }
   }
 
 
