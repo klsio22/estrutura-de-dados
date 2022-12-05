@@ -21,6 +21,4 @@ public class Exr06 {
     //criar um menu para que o usuário escola a opção
     menu.changeOption(scan, list);
   }
-
-
 }

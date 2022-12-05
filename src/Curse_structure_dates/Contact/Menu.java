@@ -31,14 +31,19 @@ public class Menu {
           researchExistContact(scan, list);
           break;
         case 7:
+          removeForPosition(scan, list);
           break;
         case 8:
+          removeContact(scan, list);
           break;
         case 9:
+          printSizeVector(list);
           break;
         case 10:
+          clearVector(list);
           break;
         case 11:
+          printVector(list);
           break;
         default:
           break;
@@ -49,9 +54,9 @@ public class Menu {
 
   public void addFinalContact(Scanner scan, Lists<Contact> list) {
     System.out.println("Criado um contato, entre com as informações");
-    String name = readInformation("Entre com o telefone", scan);
-    String phone = readInformation("Entre com o telefone", scan);
-    String email = readInformation("Entre com o telefone", scan);
+    String name = readInformation("Entre com o nome", scan);
+    String phone = readInformation("Entre com o phone", scan);
+    String email = readInformation("Entre com o email", scan);
 
     Contact contact = new Contact(name, phone, email);
     list.add(contact);
@@ -167,15 +172,49 @@ public class Menu {
         System.out.println("Contato existe, seguem dados:");
         System.out.println(contact);
       }
-      System.out.println("Contato encotrado na posição " + position);
 
     } catch (Exception e) {
       System.out.println("Posição inválida");
     }
   }
 
+  public void removeForPosition(Scanner scan, Lists<Contact> list) {
+    int position = readInformationInt("Entre com a posição a ser pesquisada", scan);
 
-  public int getOptionMenu(Scanner scan) {
+    try {
+      list.remove(position);
+      System.out.println("Contato por posição excluído");
+    } catch (Exception e) {
+      System.out.println("Posição inválida");
+    }
+  }
+
+  public void removeContact(Scanner scan, Lists<Contact> list) {
+    int position = readInformationInt("Entre com a posição a ser pesquisada", scan);
+
+    try {
+      Contact contact = list.search(position);
+      list.remove(contact);
+      System.out.println("Contato excluído");
+    } catch (Exception e) {
+      System.out.println("Posição inválida");
+    }
+  }
+
+  public void printSizeVector(Lists<Contact> list) {
+    System.out.println("Tamanho vetor é de :" + list.size());
+  }
+
+  public void clearVector(Lists<Contact> list) {
+    list.clear();
+    System.out.println("Todos os contatos do vertor foram excluidos");
+  }
+
+  public void printVector(Lists<Contact> list) {
+    System.out.println();
+  }
+
+    public int getOptionMenu(Scanner scan) {
     boolean inputValid = false;
     int selectOption = 0;
     String input;
