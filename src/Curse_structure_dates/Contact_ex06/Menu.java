@@ -1,4 +1,4 @@
-package Curse_structure_dates.Contact;
+package Curse_structure_dates.Contact_ex06;
 
 import Curse_structure_dates.Vector_base.Lists;
 

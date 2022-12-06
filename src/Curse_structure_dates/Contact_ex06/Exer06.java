@@ -1,11 +1,10 @@
-package Curse_structure_dates.Contact;
+package Curse_structure_dates.Contact_ex06;
 
-import Curse_structure_dates.Contact.Contact;
 import Curse_structure_dates.Vector_base.Lists;
 
 import java.util.Scanner;
 
-public class Exr06 {
+public class Exer06 {
   public static void main(String[] args) {
 
     //criação das variavies
