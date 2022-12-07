@@ -2,9 +2,7 @@ package Curse_structure_dates.Stack;
 
 import Curse_structure_dates.Base_structure.StructureStatic;
 
-import java.lang.reflect.Type;
-
-public class Stack<T> extends StructureStatic<Type> {
+public class Stack<Type> extends StructureStatic<Type> {
   public Stack() {
     super();
   }
@@ -13,4 +11,7 @@ public class Stack<T> extends StructureStatic<Type> {
     super(capacity);
   }
 
+  public void stackUP(Type element) {
+    super.add(element);
+  }
 }

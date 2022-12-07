@@ -1,6 +1,8 @@
-package Curse_structure_dates.Stack;
+package Curse_structure_dates.Lessons_Stack;
 
-public class testStack {
+import Curse_structure_dates.Stack.Stack;
+
+public class Lesson13 {
   public static void main(String[] args) {
     Stack<Integer> stack = new Stack<Integer>();
 

@@ -45,7 +45,7 @@ public class Lists<Type> {
 
   private void increaseCapacity() {
     if (this.size == this.elements.length) {
-      Type[] newElements = (Type[]) new String[this.elements.length * 2];
+      Type[] newElements = (Type[]) new Object[this.elements.length * 2];
       for (int i = 0; i < this.elements.length; i++) {
         newElements[i] = this.elements[i];
       }

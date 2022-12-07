@@ -4,12 +4,12 @@ public class StructureStatic<Type> {
   protected Type[] elements;
   protected int size;
 
-  public StructureStatic(int capacity) {
+  protected StructureStatic(int capacity) {
     this.elements = (Type[]) new Object[capacity];
     this.size = 0;
   }
 
-  public StructureStatic() {
+  protected StructureStatic() {
     this(10);
   }
 
@@ -37,9 +37,9 @@ public class StructureStatic<Type> {
     this.size++;
   }
 
-  protected void increaseCapacity() {
+  private void increaseCapacity() {
     if (this.size == this.elements.length) {
-      Type[] newElements = (Type[]) new String[this.elements.length * 2];
+      Type[] newElements = (Type[]) new Object[this.elements.length * 2];
       for (int i = 0; i < this.elements.length; i++) {
         newElements[i] = this.elements[i];
       }
@@ -47,6 +47,9 @@ public class StructureStatic<Type> {
     }
   }
 
+  public boolean isEmpty() {
+    return this.size() == 0;
+  }
 
   public int size() {
     return this.size;
