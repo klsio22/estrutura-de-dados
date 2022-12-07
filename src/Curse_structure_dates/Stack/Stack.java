@@ -27,10 +27,11 @@ public class Stack<Type> extends StructureStatic<Type> {
     if (this.isEmpty()) {
       return null;
     }
-/*    Type element = this.elements[size - 1];
+    /*
+    Type element = this.elements[size - 1];
     size--;
-
-    return element;*/
+    return element;
+    */
 
     return this.elements[--size];
   }
